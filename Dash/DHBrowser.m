@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.backgroundColor = UIColor.secondarySystemBackgroundColor;
+    self.tableView.backgroundColor = UIColor.tertiarySystemBackgroundColor;
 }
 
 @end

@@ -31,6 +31,7 @@
     [super layoutSubviews];
     self.titleLabel.textColor = UIColor.labelColor;
     self.contentView.backgroundColor = UIColor.secondarySystemBackgroundColor;
+    self.backgroundColor = UIColor.secondarySystemBackgroundColor;
 }
 
 - (NSString *)accessibilityValue

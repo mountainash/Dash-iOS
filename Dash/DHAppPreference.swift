@@ -40,11 +40,15 @@ import Foundation
             NotificationCenter.default.post(name: DHUserInterfaceStyleHasChanged, object: nil, userInfo: [DHThemeKey: newValue])
         }
         get {
-            UIUserInterfaceStyle(rawValue: customInterfaceStyleRawValue)!
+            UIUserInterfaceStyle(rawValue: customInterfaceStyleRawValue) ?? .light
         }
     }
     
     @UserDefaultsBacked(wrappedValue: true, key: "followSystemSetting") var followSystemSetting: Bool
+    
+    @UserDefaultsBacked(wrappedValue: true, key: "AutomaticallyCheckForUpdates") var automaticallyCheckForUpdates: Bool
+    
+    @UserDefaultsBacked(wrappedValue: true, key: "DocSetAlphabetizing") var docSetAlphabetizing: Bool
     
     static var shared = DHAppPreference()
     

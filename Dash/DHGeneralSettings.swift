@@ -8,7 +8,7 @@
 
 class DHGeneralSettings: UITableViewController {
     
-    static let shared = DHGeneralSettings()
+    let sharedPreference = DHAppPreference.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,10 +80,10 @@ class DHGeneralSettings: UITableViewController {
         } else if section == .automaticUpdates {
             if indexPath.item
              == 0 {
-                return switchCell(title: "Automatic Updates", isOn: {false}, action: #selector(automaticUpdatesSettingChanged(_:)))
+                return switchCell(title: "Automatic Updates", isOn: {sharedPreference.automaticallyCheckForUpdates}, action: #selector(automaticUpdatesSettingChanged(_:)))
             }
         } else if section == .sortAlphabetically {
-            return switchCell(title: "Sort Alphabetically", isOn: {false}, action: #selector(automaticUpdatesSettingChanged(_:)))
+            return switchCell(title: "Sort Alphabetically", isOn: {sharedPreference.docSetAlphabetizing}, action: #selector(sortAlphabeticallySettingChanged(_:)))
         }
         fatalError("")
     }
@@ -91,9 +91,9 @@ class DHGeneralSettings: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         let section = sections[section]
         if section == .automaticUpdates {
-            return "Dash will notify when docset updates are avaliable."
+            return "Dash \(sharedPreference.automaticallyCheckForUpdates ? "will" : "won't") notify when docset updates are avaliable."
         } else if section == .sortAlphabetically {
-            return "Docsets won't be sorted alphabetically in the docset browser."
+            return "Docsets \(sharedPreference.docSetAlphabetizing ? "will" : "won't") be sorted alphabetically in the docset browser."
         }
         return nil
     }
@@ -145,7 +145,21 @@ class DHGeneralSettings: UITableViewController {
     }
     
     @objc func automaticUpdatesSettingChanged(_ sender: UISwitch) {
-        
+        CATransaction.setCompletionBlock { [weak self] in
+            self?.sharedPreference.automaticallyCheckForUpdates = sender.isOn
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                self?.reload()
+            }
+        }
+    }
+    
+    @objc func sortAlphabeticallySettingChanged(_ sender: UISwitch) {
+        CATransaction.setCompletionBlock { [weak self] in
+            self?.sharedPreference.docSetAlphabetizing = sender.isOn
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                self?.reload()
+            }
+        }
     }
     
     @objc func useLightTheme() {
