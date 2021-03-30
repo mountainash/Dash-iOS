@@ -48,3 +48,4 @@
 #import "DHEntryBrowser.h"
 #import "DHAppleAPISchemeHandler.h"
 #import "DHTarixSchemeHandler.h"
+#import "DHBrowserTableViewCell.h"

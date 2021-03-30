@@ -33,6 +33,7 @@
 #endif
 #import "DHRemoteServer.h"
 #import "DHRemoteProtocol.h"
+#import "Dash-Swift.h"
 
 @implementation DHAppDelegate
 
@@ -108,8 +109,9 @@
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)actualURL sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
 {
+    NSURL *actualURL = url;
     if([[actualURL absoluteString] hasCaseInsensitivePrefix:@"dash://"] || [[actualURL absoluteString] hasCaseInsensitivePrefix:@"dash-plugin://"])
     {
         [[NSNotificationCenter defaultCenter] postNotificationName:DHPrepareForURLSearch object:nil];

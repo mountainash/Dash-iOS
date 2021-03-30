@@ -150,7 +150,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DHBrowserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:(self.isLoading || self.isEmpty) ? @"DHLoadingCell" : @"DHBrowserCell" forIndexPath:indexPath];
-    
     if((self.isLoading || self.isEmpty) && indexPath.row == 2)
     {
         cell.userInteractionEnabled = NO;

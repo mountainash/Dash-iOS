@@ -17,17 +17,13 @@
 
 #import "DHDocsetBrowser.h"
 #import "DHDBSearchController.h"
-@protocol SearchViewController;
 
-@interface DHTypeBrowser : UITableViewController <UINavigationControllerDelegate, SearchViewController>
+@interface DHTypeBrowser : DHBrowser <UINavigationControllerDelegate>
 
 @property (strong) DHDocset *docset;
 @property (strong) NSMutableArray *types;
 @property (assign) BOOL isLoading;
 @property (assign) BOOL isEmpty;
-@property (strong) DHDBSearchController *dbSearchController;
-@property (strong) UISearchController *searchController;
-@property (strong) UITableView *searchResultTableView;
 @property (assign) BOOL didFirstLoad;
 @property (assign) BOOL isRestoring;
 @property (assign) BOOL didLoad;

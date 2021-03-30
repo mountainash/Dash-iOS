@@ -17,16 +17,13 @@
 
 #import "DHDocsetBrowser.h"
 
-@interface DHEntryBrowser : UITableViewController
+@interface DHEntryBrowser : DHBrowser
 
 @property (strong) DHDocset *docset;
 @property (strong) NSString *type;
 @property (strong) NSMutableArray *entries;
 @property (assign) BOOL isLoading;
 @property (assign) BOOL isEmpty;
-@property (strong) DHDBSearchController *dbSearchController;
-@property (strong) UISearchController *searchController;
-@property (strong) UITableView *searchResultTableView;
 @property (strong) NSCoder *decoder;
 @property (assign) BOOL isRestoring;
 @property (assign) BOOL didLoad;

@@ -27,6 +27,12 @@
     self.uninstallButton.tag = index;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.titleLabel.textColor = UIColor.labelColor;
+    self.contentView.backgroundColor = UIColor.secondarySystemBackgroundColor;
+}
+
 - (NSString *)accessibilityValue
 {
     return [self.titleLabel accessibilityValue];

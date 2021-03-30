@@ -482,6 +482,7 @@
     if(self.loading)
     {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DHLoadingCell" forIndexPath:indexPath];
+        cell.backgroundColor = UIColor.secondarySystemBackgroundColor;
         cell.userInteractionEnabled = NO;
         if(indexPath.row == 2)
         {
@@ -821,6 +822,8 @@
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"DHRepoCell" bundle:nil] forCellReuseIdentifier:@"DHRepoCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"DHLoadingCell" bundle:nil] forCellReuseIdentifier:@"DHLoadingCell"];
+    self.tableView.backgroundColor = UIColor.secondarySystemBackgroundColor;
+    self.tableView.sectionIndexBackgroundColor = UIColor.secondarySystemBackgroundColor;
     self.resultViewController = [UITableViewController new];
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.resultViewController];
     self.searchBar = self.searchController.searchBar;

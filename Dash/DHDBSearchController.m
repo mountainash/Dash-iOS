@@ -28,7 +28,7 @@
 
 @implementation DHDBSearchController
 
-+ (DHDBSearchController *)searchControllerWithDocsets:(NSArray *)docsets typeLimit:(NSString *)typeLimit viewController:( UIViewController<SearchViewController>*)viewController;
++ (DHDBSearchController *)searchControllerWithDocsets:(NSArray *)docsets typeLimit:(NSString *)typeLimit viewController:(DHBrowser *)viewController;
 {
     DHDBSearchController *controller = [[DHDBSearchController alloc] init];
     controller.docsets = docsets;
@@ -36,8 +36,6 @@
     controller.viewController = viewController;
     controller.searchController = viewController.searchController;
     controller.searchController.searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    controller.searchController.searchBar.barTintColor = [UIColor colorWithRed:0.79 green:0.79 blue:0.81 alpha:1.00];
-    controller.searchController.searchBar.searchTextField.backgroundColor = UIColor.whiteColor;
     
     [controller hookToSearchController:viewController.searchController];
     [[NSNotificationCenter defaultCenter] addObserver:controller selector:@selector(traitCollectionDidChange:) name:DHWindowChangedTraitCollection object:nil];

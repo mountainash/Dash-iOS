@@ -249,12 +249,20 @@
 		43FD2F0219BB8D87007E594D /* DHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FD2F0119BB8D87007E594D /* DHWebViewController.m */; };
 		43FD2F0419BB8D87007E594D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43FD2F0319BB8D87007E594D /* Images.xcassets */; };
 		820E1793260D9D4D006AB5B9 /* SwiftMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820E1792260D9D4D006AB5B9 /* SwiftMacro.swift */; };
+		82318C0826118F4A00F0237E /* DHSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82318C0726118F4A00F0237E /* DHSettingsCell.swift */; };
+		82318C0926118F4A00F0237E /* DHSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82318C0726118F4A00F0237E /* DHSettingsCell.swift */; };
+		82318C122611C57D00F0237E /* DHBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 82318C112611C57D00F0237E /* DHBrowser.m */; };
+		82318C132611C57D00F0237E /* DHBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 82318C112611C57D00F0237E /* DHBrowser.m */; };
+		82318C1826121F9A00F0237E /* DHAppPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82318C1726121F9A00F0237E /* DHAppPreference.swift */; };
+		82318C1926121F9A00F0237E /* DHAppPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82318C1726121F9A00F0237E /* DHAppPreference.swift */; };
+		82318C1B2612300400F0237E /* DHGeneralSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82318C1A2612300400F0237E /* DHGeneralSettings.swift */; };
+		82318C1C2612300400F0237E /* DHGeneralSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82318C1A2612300400F0237E /* DHGeneralSettings.swift */; };
 		824427D926109C9700A4CB01 /* DHAppleAPISchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 824427D826109C9700A4CB01 /* DHAppleAPISchemeHandler.m */; };
 		824427DC26109F2E00A4CB01 /* DHTarixSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 824427DB26109F2E00A4CB01 /* DHTarixSchemeHandler.m */; };
-		82568438260E262800102511 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82568437260E262800102511 /* SearchViewController.swift */; };
-		82568439260E262800102511 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82568437260E262800102511 /* SearchViewController.swift */; };
 		82568450261028B000102511 /* DHWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256844F261028B000102511 /* DHWebView.swift */; };
 		82B5A16326104223009D3378 /* DHWebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B5A16226104223009D3378 /* DHWebViewExtension.swift */; };
+		82CA509326133E2700AA965F /* UIViewController+ObserveInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA509226133E2700AA965F /* UIViewController+ObserveInterface.swift */; };
+		82CA509426133E2700AA965F /* UIViewController+ObserveInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA509226133E2700AA965F /* UIViewController+ObserveInterface.swift */; };
 		9A8C217E42163C61F294085F /* libPods-Dash.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB60EFDCE4B356ECE28E89D /* libPods-Dash.a */; };
 		A5151F41679D15281D40AA89 /* libPods-Dash-Dash App Store.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F3DE7BCF54846FEC11FF28 /* libPods-Dash-Dash App Store.a */; };
 		F5C39C00200A836D00734571 /* DHDocsetBrowserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C39BFF200A836D00734571 /* DHDocsetBrowserViewModel.m */; };
@@ -494,13 +502,18 @@
 		7E45E2662CBB7671D0D844A3 /* Pods-Dash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dash.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Dash/Pods-Dash.release.xcconfig"; sourceTree = "<group>"; };
 		820E158C260D92BF006AB5B9 /* Dash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dash-Bridging-Header.h"; sourceTree = "<group>"; };
 		820E1792260D9D4D006AB5B9 /* SwiftMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMacro.swift; sourceTree = "<group>"; };
+		82318C0726118F4A00F0237E /* DHSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHSettingsCell.swift; sourceTree = "<group>"; };
+		82318C102611C57D00F0237E /* DHBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHBrowser.h; sourceTree = "<group>"; };
+		82318C112611C57D00F0237E /* DHBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHBrowser.m; sourceTree = "<group>"; };
+		82318C1726121F9A00F0237E /* DHAppPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHAppPreference.swift; sourceTree = "<group>"; };
+		82318C1A2612300400F0237E /* DHGeneralSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHGeneralSettings.swift; sourceTree = "<group>"; };
 		824427D726109C9700A4CB01 /* DHAppleAPISchemeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHAppleAPISchemeHandler.h; sourceTree = "<group>"; };
 		824427D826109C9700A4CB01 /* DHAppleAPISchemeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHAppleAPISchemeHandler.m; sourceTree = "<group>"; };
 		824427DA26109F2E00A4CB01 /* DHTarixSchemeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTarixSchemeHandler.h; sourceTree = "<group>"; };
 		824427DB26109F2E00A4CB01 /* DHTarixSchemeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTarixSchemeHandler.m; sourceTree = "<group>"; };
-		82568437260E262800102511 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8256844F261028B000102511 /* DHWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHWebView.swift; sourceTree = "<group>"; };
 		82B5A16226104223009D3378 /* DHWebViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHWebViewExtension.swift; sourceTree = "<group>"; };
+		82CA509226133E2700AA965F /* UIViewController+ObserveInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ObserveInterface.swift"; sourceTree = "<group>"; };
 		91F3DE7BCF54846FEC11FF28 /* libPods-Dash-Dash App Store.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dash-Dash App Store.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE47FF5DEE33300EBFF9AEA /* Pods-Dash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dash.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Dash/Pods-Dash.debug.xcconfig"; sourceTree = "<group>"; };
 		BFB60EFDCE4B356ECE28E89D /* libPods-Dash.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dash.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -664,7 +677,6 @@
 				435145941DEB701E000874A8 /* Cheat Sheets */,
 				437699A219D8FD00008B37F4 /* Transferrer */,
 				434AB15819C273A500791E07 /* Others */,
-				82568437260E262800102511 /* SearchViewController.swift */,
 			);
 			name = Repos;
 			sourceTree = "<group>";
@@ -674,6 +686,10 @@
 			children = (
 				4398D34419BF55B500457CAF /* DHPreferences.h */,
 				4398D34519BF55B500457CAF /* DHPreferences.m */,
+				82318C0726118F4A00F0237E /* DHSettingsCell.swift */,
+				82318C1726121F9A00F0237E /* DHAppPreference.swift */,
+				82318C1A2612300400F0237E /* DHGeneralSettings.swift */,
+				82CA509226133E2700AA965F /* UIViewController+ObserveInterface.swift */,
 			);
 			name = Preferences;
 			sourceTree = "<group>";
@@ -692,6 +708,8 @@
 				439051F719E684160083A55E /* DHEntryBrowser.h */,
 				439051F819E684160083A55E /* DHEntryBrowser.m */,
 				439051F319E67D5B0083A55E /* Others */,
+				82318C102611C57D00F0237E /* DHBrowser.h */,
+				82318C112611C57D00F0237E /* DHBrowser.m */,
 			);
 			name = Browser;
 			sourceTree = "<group>";
@@ -1378,6 +1396,7 @@
 				43AB65371ED19D2F00A6EC18 /* NSObject+DHUtils.m in Sources */,
 				43AB65381ED19D2F00A6EC18 /* UIView+DHUtils.m in Sources */,
 				43AB65391ED19D2F00A6EC18 /* NSString+DHUtils.m in Sources */,
+				82CA509426133E2700AA965F /* UIViewController+ObserveInterface.swift in Sources */,
 				43AB653A1ED19D2F00A6EC18 /* FMDatabase.m in Sources */,
 				43AB653B1ED19D2F00A6EC18 /* DHPreferences.m in Sources */,
 				43AB653C1ED19D2F00A6EC18 /* DHTypeBrowser.m in Sources */,
@@ -1417,7 +1436,6 @@
 				43AB655E1ED19D2F00A6EC18 /* DHDocsetManager.m in Sources */,
 				43AB655F1ED19D2F00A6EC18 /* DHTransferFeed.m in Sources */,
 				43AB65601ED19D2F00A6EC18 /* NSFileManager+DHUtils.m in Sources */,
-				82568439260E262800102511 /* SearchViewController.swift in Sources */,
 				43AB65611ED19D2F00A6EC18 /* whitespace_tokenizer.c in Sources */,
 				43AB65621ED19D2F00A6EC18 /* DHJavaScriptBridge.m in Sources */,
 				43AB65631ED19D2F00A6EC18 /* NSTimer+DHUtils.m in Sources */,
@@ -1429,9 +1447,11 @@
 				43AB65691ED19D2F00A6EC18 /* DHNavigationController.m in Sources */,
 				43AB656A1ED19D2F00A6EC18 /* DHRepoTableViewCell.m in Sources */,
 				43AB656B1ED19D2F00A6EC18 /* DHFeed.m in Sources */,
+				82318C0926118F4A00F0237E /* DHSettingsCell.swift in Sources */,
 				43AB656C1ED19D2F00A6EC18 /* DHRemoteServer.m in Sources */,
 				43AB656D1ED19D2F00A6EC18 /* DHLatencyTestResult.m in Sources */,
 				43AB656E1ED19D2F00A6EC18 /* DHDBSearchController.m in Sources */,
+				82318C1926121F9A00F0237E /* DHAppPreference.swift in Sources */,
 				43AB656F1ED19D2F00A6EC18 /* DHCheatRepoList.m in Sources */,
 				43AB65701ED19D2F00A6EC18 /* DHQueuedDB.m in Sources */,
 				43AB65711ED19D2F00A6EC18 /* FMResultSet.m in Sources */,
@@ -1446,7 +1466,9 @@
 				43AB65791ED19D2F00A6EC18 /* DHTarixIndex.m in Sources */,
 				43AB657A1ED19D2F00A6EC18 /* DHJavaScript.m in Sources */,
 				43AB657B1ED19D2F00A6EC18 /* DHDBResult.m in Sources */,
+				82318C132611C57D00F0237E /* DHBrowser.m in Sources */,
 				43AB657C1ED19D2F00A6EC18 /* DHNestedViewController.m in Sources */,
+				82318C1C2612300400F0237E /* DHGeneralSettings.swift in Sources */,
 				43AB657D1ED19D2F00A6EC18 /* DHFileDownload.m in Sources */,
 				43AB657E1ED19D2F00A6EC18 /* DHLatencyTester.m in Sources */,
 				43AB657F1ED19D2F00A6EC18 /* DHImageCache.m in Sources */,
@@ -1475,7 +1497,6 @@
 				43DCAEB81A9C3C8500A28A95 /* NSData+DHUtils.m in Sources */,
 				82B5A16326104223009D3378 /* DHWebViewExtension.swift in Sources */,
 				4303A3BE19C6584F00A7CD85 /* FMDatabaseAdditions.m in Sources */,
-				82568438260E262800102511 /* SearchViewController.swift in Sources */,
 				436DF78019FFA926008814F8 /* DHRepoTableView.m in Sources */,
 				43F25F9C19EBDEF30025CDC4 /* DHBlockProtocol.m in Sources */,
 				43B0956C19BFD57500F8611B /* DHRepo.m in Sources */,
@@ -1501,6 +1522,7 @@
 				43FD2EF219BB8D87007E594D /* main.m in Sources */,
 				43D28EBB19F97D5500FDC5EE /* DHTocBrowser.m in Sources */,
 				43B0956F19BFDBDC00F8611B /* DHDocsetDownloader.m in Sources */,
+				82318C0826118F4A00F0237E /* DHSettingsCell.swift in Sources */,
 				43F7527319CD1C2000D76F58 /* UIButton+DHUtils.m in Sources */,
 				434A77DC1BAE590C00CCF84B /* DHSplitViewController.m in Sources */,
 				43418C281A0B63B00014EFB6 /* DHWebView.m in Sources */,
@@ -1514,6 +1536,7 @@
 				4361651D19CCF8500026F08E /* NSTimer+DHUtils.m in Sources */,
 				430C768B19E52B7F006F0DE0 /* DHTarixProtocol.m in Sources */,
 				4303A3D419C668C200A7CD85 /* DHTypes.m in Sources */,
+				82318C122611C57D00F0237E /* DHBrowser.m in Sources */,
 				4303A3C019C6584F00A7CD85 /* FMDatabasePool.m in Sources */,
 				820E1793260D9D4D006AB5B9 /* SwiftMacro.swift in Sources */,
 				4341A1F619BFE89A00AD164A /* DHDocsetTransferrer.m in Sources */,
@@ -1526,11 +1549,13 @@
 				43D4F06D19E7E88400C22AF5 /* DHDBSearchController.m in Sources */,
 				4351459A1DEB7099000874A8 /* DHCheatRepoList.m in Sources */,
 				43D4F06419E7CEC500C22AF5 /* DHQueuedDB.m in Sources */,
+				82318C1B2612300400F0237E /* DHGeneralSettings.swift in Sources */,
 				4303A3BF19C6584F00A7CD85 /* FMResultSet.m in Sources */,
 				43FC34041DE784C40089F134 /* DHUserRepoList.m in Sources */,
 				824427DC26109F2E00A4CB01 /* DHTarixSchemeHandler.m in Sources */,
 				43280F541DDE4A7B001C2062 /* DHUserRepo.m in Sources */,
 				43B0956919BFD19900F8611B /* DHNavigationAnimator.m in Sources */,
+				82CA509326133E2700AA965F /* UIViewController+ObserveInterface.swift in Sources */,
 				439051F919E684160083A55E /* DHEntryBrowser.m in Sources */,
 				431108D519C7AE6D0050174C /* DHUnarchiver.m in Sources */,
 				4303A3CD19C65E6A00A7CD85 /* DHDocsetIndexer.m in Sources */,
@@ -1545,6 +1570,7 @@
 				431173DC19DA3513007E238E /* DHImageCache.m in Sources */,
 				43FD2EFF19BB8D87007E594D /* DHDocsetBrowser.m in Sources */,
 				43AAB7821AAE776800DB76F3 /* DHRemoteProtocol.m in Sources */,
+				82318C1826121F9A00F0237E /* DHAppPreference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1815,7 +1841,7 @@
 					"$(PROJECT_DIR)",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kapeli.chy.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chy.dash.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -1863,7 +1889,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kapeli.chy.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chy.dash.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;

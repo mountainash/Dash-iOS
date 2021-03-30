@@ -325,7 +325,6 @@ static NSAttributedString *_titleBarItemAttributedStringTemplate = nil;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DHBrowserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DHBrowserCell" forIndexPath:indexPath];
-    
     DHDocset *docset = self.sections[indexPath.section][indexPath.row];
     cell.textLabel.text = docset.name;
     cell.detailTextLabel.text = @"";

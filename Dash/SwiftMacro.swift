@@ -38,6 +38,10 @@ let DHSplitViewControllerDidCollapse = "DHSplitViewControllerDidCollapse"
 let DHPerformURLSearch = "DHPerformURLSearch"
 let DHWindowChangedTraitCollection = "DHWindowChangedTraitCollection"
 
+let DHUserInterfaceStyleHasChanged: Notification.Name = .init("DHUserInterfaceStyleHasChanged")
+let DHThemeKey = "DHThemeKey"
+
+
 
 
 

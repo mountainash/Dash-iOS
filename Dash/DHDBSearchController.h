@@ -17,7 +17,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DHDBSearcher.h"
-@protocol SearchViewController;
+#import "DHBrowser.h"
 
 @interface DHDBSearchController : NSObject <UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating, UITableViewDataSource, UITableViewDelegate, DHDBSearcherDelegate>
 
@@ -27,12 +27,12 @@
 @property (retain) NSMutableArray *results;
 @property (retain) NSMutableArray *nextResults;
 @property (weak) UISearchController *searchController;
-@property (weak) UIViewController<SearchViewController> *viewController;
+@property (weak) DHBrowser *viewController;
 @property (retain) DHDBSearcher *searcher;
 @property (retain) NSString *viewControllerTitle;
 @property (assign) BOOL isRestoring;
 
-+ (DHDBSearchController *)searchControllerWithDocsets:(NSArray *)docsets typeLimit:(NSString *)typeLimit viewController:(UIViewController<SearchViewController> *)viewController;
++ (DHDBSearchController *)searchControllerWithDocsets:(NSArray *)docsets typeLimit:(NSString *)typeLimit viewController:(DHBrowser *)viewController;
 - (void)viewWillAppear;
 - (void)viewDidAppear;
 - (void)viewDidDisappear;

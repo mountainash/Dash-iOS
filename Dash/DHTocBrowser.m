@@ -38,6 +38,8 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"DHBrowserCell" bundle:nil] forCellReuseIdentifier:@"DHBrowserCell"];
     self.tableView.separatorInset = UIEdgeInsetsMake(0, DHHeaderSeparatorInset, 0, 0);
     self.tableView.rowHeight = 44;
+    self.view.backgroundColor = UIColor.secondarySystemBackgroundColor;
+    self.tableView.backgroundColor = UIColor.secondarySystemBackgroundColor;
 }
 
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
