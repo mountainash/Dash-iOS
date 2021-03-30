@@ -128,7 +128,7 @@ import SnapKit
         configuration.allowsInlineMediaPlayback = true
         configuration.allowsPictureInPictureMediaPlayback = true
         configuration.dataDetectorTypes = []
-        
+        configuration.defaultWebpagePreferences.preferredContentMode = .mobile
         webView = DHWebView(frame: .zero, configuration: configuration)
         view.addSubview(webView)
         webView.snp.makeConstraints { (make) in
