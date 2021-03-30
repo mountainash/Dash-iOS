@@ -4,6 +4,9 @@
 - [x] Replace UISearchDisplayController with UISearchController.
 - [x] Migrate from UIWebView to WKWebView (Basic support for viewing docsets).
 - [ ] Dark Mode Support (Done for the native part, web content is working in in progress, better if the original author can give a copy of css that supports dark mode).
+- [ ] Download docsets from remote url.
+- [ ] Add support for sharing & drag and drop docsets.
+- [ ] Imporve support for keyboard and pointer.
 - [ ] Support Apple docset (Not in my current plan without help from the original author).
 
 # Acknowledgement
