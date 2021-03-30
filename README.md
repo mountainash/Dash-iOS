@@ -1,8 +1,8 @@
 # Maintained Dash for iOS
 
 # Status
-- [x] Replace UISearchDisplayController to UISearchController.
-- [x] Migrate UIWebView to WKWebView (Basic support for viewing docsets).
+- [x] Replace UISearchDisplayController with UISearchController.
+- [x] Migrate from UIWebView to WKWebView (Basic support for viewing docsets).
 - [ ] Dark Mode Support (Done for the native part, web content is working in in progress, better if original author can give a copy of css that supports dark mode).
 - [ ] Support Apple docset (Not in my current plan without help from original author).
 
