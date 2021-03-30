@@ -117,7 +117,7 @@ class DHGeneralSettings: UITableViewController {
         cell.textLabel?.text = title
         cell.accessoryView = nil
         cell.accessoryType = isChecked() ? .checkmark : .none
-        cell.backgroundColor = .tertiarySystemBackground
+        cell.backgroundColor = .tertiarySystemGroupedBackground
         return cell
     }
     
