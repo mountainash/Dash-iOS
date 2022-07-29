@@ -223,6 +223,10 @@ static id singleton = nil;
     return [UIImage imageNamed:@"placeholder_transfer"];
 }
 
+- (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView {
+    return UIColor.secondarySystemBackgroundColor;
+}
+
 - (NSAttributedString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state
 {
     NSString *text = @"Open Help";
@@ -259,6 +263,7 @@ static id singleton = nil;
     self.ignoreReload = YES;
     [self poll];
     self.ignoreReload = NO;
+    self.tableView.backgroundColor = UIColor.secondarySystemBackgroundColor;
     if(self.feeds.count)
     {
         [self reload];

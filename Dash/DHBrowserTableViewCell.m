@@ -23,6 +23,11 @@
 {
     [super awakeFromNib];
     self.titleLabel.isBrowserCell = YES;
+    self.backgroundColor = UIColor.tertiarySystemBackgroundColor;
+    self.contentView.backgroundColor = UIColor.tertiarySystemBackgroundColor;
+    UIView *bgView = [UIView new];
+    bgView.backgroundColor = UIColor.tertiarySystemBackgroundColor;
+    self.selectedBackgroundView = bgView;
 }
 
 - (void)makeEntryCell

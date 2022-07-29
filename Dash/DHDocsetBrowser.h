@@ -20,11 +20,11 @@
 #import "DHBrowserTableViewCell.h"
 #import "DHDBSearchController.h"
 #import "DHBrowserTableView.h"
+#import "DHBrowser.h"
 
-@interface DHDocsetBrowser : UITableViewController <UINavigationControllerDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, DHBrowserTableViewDelegate>
+@interface DHDocsetBrowser : DHBrowser <UINavigationControllerDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, DHBrowserTableViewDelegate, UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
 
 @property (assign) BOOL didFirstReload;
-@property (strong) DHDBSearchController *searchController;
 @property (strong, readonly) NSArray<DHDocset *> *shownDocsets;
 @property (assign) BOOL didLoad;
 @property (assign) BOOL isSearching;

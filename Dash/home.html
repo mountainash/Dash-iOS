@@ -1,6 +1,20 @@
 <html><head>
 <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=1"/>
 <title>Dash</title>
+<style>
+    :root {
+      color-scheme: light dark;
+      --secondary-label-color: #3c3c4399;
+    }
+    @media screen and (prefers-color-scheme: dark) {
+      :root {
+        --secondary-label-color: #ebebf599;
+      }
+    }
+    div {
+        color: var(--secondary-label-color) !important;
+    }
+</style>
 </head>
 
 <body style='font-family: Helvetica Neue; font-weight:lighter;-webkit-user-select:none; padding:0px 5px; color:#333333'>

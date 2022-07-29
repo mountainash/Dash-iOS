@@ -21,7 +21,7 @@
 			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>com.kapeli.dash.ios.docset</string>
+				<string>com.chy.dash.ios.docset</string>
 				<string>com.apple.xcode.docset</string>
 			</array>
 		</dict>
@@ -44,7 +44,7 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>com.kapeli.dash</string>
+			<string>com.chy.dash</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>dash-plugin</string>
@@ -148,8 +148,10 @@
 			</array>
 			<key>UTTypeDescription</key>
 			<string>Docset File Type Handler</string>
+			<key>UTTypeIconFiles</key>
+			<array/>
 			<key>UTTypeIdentifier</key>
-			<string>com.kapeli.dash.ios.docset</string>
+			<string>com.chy.dash.ios.docset</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -168,8 +170,10 @@
 			</array>
 			<key>UTTypeDescription</key>
 			<string>Docset File Type Handler</string>
+			<key>UTTypeIconFiles</key>
+			<array/>
 			<key>UTTypeIdentifier</key>
-			<string>com.kapeli.dash.ios.docset</string>
+			<string>com.chy.dash.ios.docset</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>

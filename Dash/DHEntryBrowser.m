@@ -30,8 +30,12 @@
         return;
     }
     [super viewDidLoad];
+    UITableViewController *tableViewController = [UITableViewController new];
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController: tableViewController];
+    self.searchResultTableView = tableViewController.tableView;
     self.clearsSelectionOnViewWillAppear = NO;
-    self.searchController = [DHDBSearchController searchControllerWithDocsets:@[self.docset] typeLimit:self.type viewController:self];
+    self.dbSearchController = [DHDBSearchController searchControllerWithDocsets:@[self.docset] typeLimit:self.type viewController:self];
+    self.navigationItem.searchController = self.searchController;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(prepareForURLSearch:) name:DHPrepareForURLSearch object:nil];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"DHBrowserCell" bundle:nil] forCellReuseIdentifier:@"DHBrowserCell"];
@@ -96,7 +100,8 @@
         });
     }
     [self.tableView deselectAll:YES];
-    [self.searchController viewWillAppear];
+    self.navigationItem.hidesSearchBarWhenScrolling = NO;
+    [self.dbSearchController viewWillAppear];
 }
 
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
@@ -106,25 +111,25 @@
         [super traitCollectionDidChange:previousTraitCollection];
     }
     [self.tableView reloadData];
-    [self.searchController traitCollectionDidChange:previousTraitCollection];
+    [self.dbSearchController traitCollectionDidChange:previousTraitCollection];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.searchController viewWillDisappear];
+    [self.dbSearchController viewWillDisappear];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    [self.searchController viewDidDisappear];
+    [self.dbSearchController viewDidDisappear];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.searchController viewDidAppear];
+    [self.dbSearchController viewDidAppear];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -145,7 +150,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DHBrowserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:(self.isLoading || self.isEmpty) ? @"DHLoadingCell" : @"DHBrowserCell" forIndexPath:indexPath];
-    
     if((self.isLoading || self.isEmpty) && indexPath.row == 2)
     {
         cell.userInteractionEnabled = NO;
@@ -196,7 +200,7 @@
     }
     else
     {
-        [self.searchController prepareForSegue:segue sender:sender];
+        [self.dbSearchController prepareForSegue:segue sender:sender];
     }
 }
 
@@ -216,7 +220,7 @@
     {
         [coder encodeObject:selectedIndexPath forKey:@"selectedIndexPath"];
     }
-    [self.searchController encodeRestorableStateWithCoder:coder];
+    [self.dbSearchController encodeRestorableStateWithCoder:coder];
     [super encodeRestorableStateWithCoder:coder];
 }
 
@@ -246,7 +250,7 @@
             [self.tableView selectRowAtIndexPath:selectedIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
         });
     }
-    [self.searchController decodeRestorableStateWithCoder:coder];
+    [self.dbSearchController decodeRestorableStateWithCoder:coder];
     [super decodeRestorableStateWithCoder:coder];
 }
 

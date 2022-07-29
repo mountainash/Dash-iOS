@@ -1,3 +1,25 @@
+:root {
+  color-scheme: light dark;
+  --label-color: black;
+  --secondary-label-color: #3c3c4399;
+  --background-color: white;
+  --secondary-background-color: #f2f2f7ff;
+}
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --label-color: white;
+    --secondary-label-color: #ebebf599;
+    --background-color: black;
+    --secondary-background-color: #1c1c1eff;
+  }
+}
+* {
+    background-color: var(--secondary-background-color) !important}
+
+h1, h2, h3, h4, h5, h6, td, th, span, li, dd, blockquote, p, code {
+    color: var(--label-color) !important;
+}
+
 body.dash_cleared {opacity:0.0 !important}
 
 body.jazz {background-color:white !important}

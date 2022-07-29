@@ -21,6 +21,7 @@
 #import "DHPreferences.h"
 #import "DHTocBrowser.h"
 #import "DHDocsetBrowser.h"
+#import "Dash-Swift.h"
 
 @implementation DHSplitViewController
 
@@ -30,7 +31,8 @@
     self.delegate = (id)self;
     self.preferredPrimaryColumnWidthFraction = (iPad) ? 0.39 : 0.35;
     self.maximumPrimaryColumnWidth = 320;
-
+    [self observeUserInterfaceChange];
+    
 }
 
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UINavigationController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController
@@ -114,9 +116,9 @@
         {
             return [controller searchBar];
         }
-        if([controller respondsToSelector:@selector(searchController)] && [controller searchController])
+        if([controller respondsToSelector:@selector(dbSearchController)] && [controller searchController])
         {
-            return [[[(DHDocsetBrowser*)controller searchController] displayController] searchBar];
+            return [[[(DHDocsetBrowser*)controller dbSearchController] searchController] searchBar];
         }
     }
     return nil;

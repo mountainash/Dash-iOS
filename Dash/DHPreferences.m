@@ -20,12 +20,14 @@
 #import "DHAppDelegate.h"
 #import "DHDocsetDownloader.h"
 #import "DHDocsetTransferrer.h"
+#import "Dash-Swift.h"
 
 @implementation DHPreferences
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.backgroundColor = UIColor.secondarySystemBackgroundColor;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(prepareForURLSearch:) name:DHPrepareForURLSearch object:nil];
 }
 
@@ -34,6 +36,7 @@
     [super viewWillAppear:animated];
     [self.updatesSwitch setOn:[[NSUserDefaults standardUserDefaults] boolForKey:[[DHDocsetDownloader sharedDownloader] defaultsAutomaticallyCheckForUpdatesKey]]];
     [self.alphabetizingSwitch setOn:[NSUserDefaults.standardUserDefaults boolForKey:DHDocsetDownloader.defaultsAlphabetizingKey]];
+    [self traitCollectionDidChange:nil];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self updateAlphabetizingSwitchFooterView:nil];
         [self updateUpdatesSwitchFooterView:nil];
@@ -181,6 +184,13 @@
             return @"DHDocsetTransferrerToDetailSegue";
         }
         return @"DHDocsetTransferrerToMasterSegue";
+    } else if([title isEqualToString:@"General Settings"]) {
+        if(isRegularHorizontalClass)
+        {
+            // Also used by DHSplitViewController. Make sure identifiers end with "ToDetailSegue"
+            return @"DHGeneralSettingsToDetailSegue";
+        }
+        return @"DHGeneralSettingsToMasterSegue";
     }
     return nil;
 }
@@ -290,6 +300,7 @@
 {
     [super encodeRestorableStateWithCoder:coder];
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    [self viewDidLoad];
     if(selectedIndexPath != nil)
     {
         [coder encodeObject:selectedIndexPath forKey:@"selectedIndexPath"];
